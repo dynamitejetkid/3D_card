@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #241e4e;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(images/egor_yakushkin.jpg) center no-repeat;
+    background-size: cover;
+}
+.card {
+    width: 250px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 5px;
+}
+.frame, .content, .back-side {
+    position: absolute;
+    width: 250px;
+    height: 400px;
+}
+.frame {
+    border: 3px solid #FB4D3D;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 5px;
+    z-index: 1;
+    pointer-events: none;
+    transition: bottom 0.5s, right 0.5s;
+
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(290deg, #FF6B6B, #FFC145);
+    border-radius: 5px;
+    z-index: 0;
+}
+.back-side {
+    background-color: #9046CF;
+    top: 15px;
+    left: 15px;
+    border-radius: 5px;
+    z-index: -1;
+    transition: top 0.5s, left 0.5s;
+}
+.card:hover .frame {
+    bottom: 0;
+    right: 0;
+    transition: bottom 0.5s, right 0.5s;
+
+}
+.card:hover .back-side {
+    top: 0;
+    left: 0;
+    transition: top 0.5s, left 0.5s;
+}
+.img {
+    width: 60%;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 3px solid #241e4e;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.2em;
+}
+p {
+    font-size: 1em;
+    width: 90%;
+    height: 50px;
+    text-align: center;
+}
+button {
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 15px;
+    background-color: #241e4e;
+    color: #FB4D3D;
+    font-size: 1em;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
